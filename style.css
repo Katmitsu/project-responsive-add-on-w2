@@ -6,13 +6,13 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   gap: 40px;
+  padding: 0 50px;
 }
 
 header {
@@ -48,6 +48,7 @@ header h3 {
 
 header a {
   font-weight: 700;
+  font-size: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
   background: white;
@@ -71,11 +72,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 0;
-}
-
-section.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 footer h3 {
