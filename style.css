@@ -10,9 +10,25 @@ body {
 
 .grid {
   display: grid;
+  grid-gap: 64px;
+}
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+  padding: 100px 50px;
+}
+.grid-3-columns-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
-  gap: 40px;
   padding: 0 50px;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 header {
@@ -36,7 +52,6 @@ header h2 {
   font-weight: 400;
   font-size: 40px;
   line-height: 1.5;
-  margin: 0;
 }
 
 header h3 {
@@ -59,6 +74,36 @@ header a {
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
+}
+
+main {
+  background-color: white;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555555;
 }
 
 footer {
@@ -85,7 +130,6 @@ footer p {
   font-size: 16px;
   opacity: 0.9;
   line-height: 30px;
-  margin-right: 20px;
 }
 
 footer ul {
@@ -119,5 +163,11 @@ footer a {
 
   header h3 {
     font-size: 18px;
+  }
+
+  .grid-2-columns,
+  .grid-3-columns-first-narrow {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
   }
 }
