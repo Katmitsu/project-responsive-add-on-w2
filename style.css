@@ -14,14 +14,18 @@ body {
 }
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
+  padding: 0 auto;
 }
 .grid-3-columns {
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 auto;
 }
 
 .grid-3-columns-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
-  padding: 0 50px;
+  padding: 16px 8px;
+
+  margin-bottom: 1px;
 }
 
 .card {
@@ -47,6 +51,29 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.img-responsive-one {
+  width: 570px;
+  height: 461;
+  display: block;
+  margin-top: 30px;
+}
+
+a.custom-btn {
+  background-color: #ffffff;
+  color: #000000;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
 }
 
 .btn {
@@ -94,11 +121,24 @@ section {
 section.secondary {
   text-align: center;
   background-color: #f8f8f8;
-  padding: 0px 100px;
+  padding: 60px 80px;
+}
+
+section.secondary-one {
+  text-align: justify;
+  background-color: #ffffff;
+  padding: 85px 100px;
+}
+
+section.secondary-two {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 85px 100px;
+  margin-top: 30px;
 }
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
     url("../img/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -200,6 +240,7 @@ footer {
 
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 100px 80px;
 }
 
 footer h3 {
@@ -231,36 +272,66 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 960px) {
-  header {
-    padding: 60px 0;
-  }
-
-  header h1 {
-    font-size: 48px;
-  }
-
-  header h2 {
-    font-size: 24px;
-  }
-
-  header h3 {
-    font-size: 18px;
-  }
-
-  .grid {
+@media (min-width: 1200px) {
+  .secondary-one {
     grid-template-columns: 1fr;
-    grid-gap: 32px;
+    grid-template-areas:
+      "image"
+      "text";
+  }
+}
+
+@media (min-width: 1024px) {
+  .secondary-two {
+    grid-columns: 1fr;
   }
 
-  .card-header img {
-    display: none;
-  }
-  .embed {
-    aspect-ratio: 16/7;
-  }
+  @media (max-width: 960px) {
+    header {
+      padding: 60px 0;
+    }
 
-  section {
-    padding: 30px;
+    header h1 {
+      font-size: 48px;
+    }
+
+    header h2 {
+      font-size: 24px;
+    }
+
+    header h3 {
+      font-size: 18px;
+    }
+
+    .grid-3-columns,
+    .grid-2-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .card-header img {
+      display: none;
+    }
+    .embed {
+      aspect-ratio: 16/7;
+    }
+    .instagram-embed {
+      margin: 50px auto;
+      width: 100%;
+    }
+    section {
+      padding: 30px 20px;
+    }
+
+    section.secondary-two {
+      grid-template-columns: 1fr;
+      padding: 30px 40px;
+    }
+
+    footer {
+      padding: 60px 20px;
+    }
+    section.grid-3-columns-first-narrow {
+      grid-template-columns: 1fr;
+    }
   }
 }
