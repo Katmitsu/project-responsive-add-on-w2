@@ -45,6 +45,7 @@ body {
 
 .card-footer {
   padding: 0;
+  background-color: #ffffff;
 }
 
 .img-responsive {
@@ -54,8 +55,8 @@ body {
 }
 
 .img-responsive-one {
-  width: 570px;
-  height: 461;
+  width: 100%;
+  height: auto;
   display: block;
   margin-top: 30px;
 }
@@ -88,6 +89,7 @@ a.custom-btn {
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 16px;
+  margin: 50px 30px;
   text-decoration: none;
 }
 
@@ -272,66 +274,68 @@ footer a {
   text-decoration: none;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .secondary-one {
     grid-template-columns: 1fr;
     grid-template-areas:
       "image"
       "text";
   }
-}
 
-@media (min-width: 1024px) {
-  .secondary-two {
-    grid-columns: 1fr;
+  @media (min-width: 1024px) {
+    .secondary-two {
+      grid-columns: 1fr;
+    }
   }
 
   @media (max-width: 960px) {
     header {
       padding: 60px 0;
     }
+  }
+  h3 {
+    font-size: 32px;
+  }
+  header h1 {
+    font-size: 48px;
+  }
 
-    header h1 {
-      font-size: 48px;
-    }
+  header h2 {
+    font-size: 24px;
+  }
 
-    header h2 {
-      font-size: 24px;
-    }
+  header h3 {
+    font-size: 18px;
+  }
 
-    header h3 {
-      font-size: 18px;
-    }
+  .grid-3-columns,
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+  }
 
-    .grid-3-columns,
-    .grid-2-columns {
-      grid-template-columns: 1fr;
-    }
+  .card-header img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16/7;
+  }
+  .instagram-embed {
+    margin: 50px auto;
+    width: 100%;
+  }
+  section {
+    padding: 30px 20px;
+  }
 
-    .card-header img {
-      display: none;
-    }
-    .embed {
-      aspect-ratio: 16/7;
-    }
-    .instagram-embed {
-      margin: 50px auto;
-      width: 100%;
-    }
-    section {
-      padding: 30px 20px;
-    }
+  section.secondary-two {
+    grid-template-columns: 1fr;
+    padding: 30px 40px;
+  }
 
-    section.secondary-two {
-      grid-template-columns: 1fr;
-      padding: 30px 40px;
-    }
-
-    footer {
-      padding: 60px 20px;
-    }
-    section.grid-3-columns-first-narrow {
-      grid-template-columns: 1fr;
-    }
+  footer {
+    padding: 60px 20px;
+  }
+  section.grid-3-columns-first-narrow {
+    grid-template-columns: 1fr;
   }
 }
